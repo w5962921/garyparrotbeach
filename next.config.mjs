@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
+  // This forces Next.js to realize your files are sitting right in the root!
+  experimental: {
+    appDir: false
+  }
+};
 
-export default nextConfig
+export default nextConfig;
