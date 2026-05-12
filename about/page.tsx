@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Award, Users, Globe, Heart, Star, Briefcase } from 'lucide-react'
-import AnimatedHero from '../animated-hero'
+
 const team = [
   {
     name: 'Victoria Ashford',
@@ -90,28 +90,31 @@ export default function About() {
         </div>
       </nav>
 
-      {/* Hero */}
-      <AnimatedHero
-        badge="SINCE 2005 | LUXURY EXCELLENCE"
-        title="About GARYPARROTBEACH"
-        subtitle="redefining luxury travel"
-        description="We craft bespoke journeys for discerning travelers who seek authenticity, expertise, and uncompromising quality. With 19 years of excellence, we connect you genuinely with the world's most remarkable destinations."
-        backgroundGradient="bg-gradient-to-br from-gray-900 via-amber-900 to-gray-900"
-        primaryCTA={{
-          text: 'Our Values',
-          href: '#values',
-        }}
-        secondaryCTA={{
-          text: 'Meet the Team',
-          href: '#team',
-        }}
-        showTrustIndicators={true}
-        trustStats={[
-          { value: '19', label: 'Years Leading' },
-          { value: '100+', label: 'Destinations' },
-          { value: '98%', label: 'Satisfaction' },
-        ]}
-      />
+      {/* Replacement High-End Hero Section */}
+      <header className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white border-b border-gray-800">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <span className="text-xs font-semibold tracking-widest text-amber-500 uppercase mb-4 block">
+            SINCE 2005 | LUXURY EXCELLENCE
+          </span>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-4">
+            About GARYPARROTBEACH
+          </h1>
+          <p className="text-lg md:text-xl text-amber-400 font-light italic mb-6 tracking-wide">
+            redefining luxury travel
+          </p>
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8 font-light">
+            We craft bespoke journeys for discerning travelers who seek authenticity, expertise, and uncompromising quality. With 19 years of excellence, we connect you genuinely with the world's most remarkable destinations.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="#values" className="bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-2.5 rounded-lg transition text-sm shadow-md">
+              Our Values
+            </a>
+            <a href="#team" className="border border-gray-600 hover:border-gray-400 text-white font-medium px-6 py-2.5 rounded-lg transition text-sm">
+              Meet the Team
+            </a>
+          </div>
+        </div>
+      </header>
 
       {/* Story Section */}
       <section className="py-20 px-6">
@@ -153,7 +156,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-6">
+      <section id="values" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-serif font-bold mb-16 text-center text-gray-900">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -172,7 +175,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="team" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4 text-gray-900">Leadership Team</h2>
