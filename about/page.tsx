@@ -3,8 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Award, Users, Globe, Heart, Star, Briefcase } from 'lucide-react'
-import AnimatedHero from '@/components/animated-hero'
-
+import AnimatedHero from '../animated-hero'
 const team = [
   {
     name: 'Victoria Ashford',
